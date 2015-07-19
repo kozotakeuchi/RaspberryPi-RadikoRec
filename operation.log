@@ -26,3 +26,22 @@ sudo apt-get install rtmpdump swftools libxml2-utils ffmpeg
 
 ・radikoを録音するためのスクリプト
 rec_radiko.sh
+
+・Mackerelで死活監視する
+Mackerel( https://mackerel.io/ja )
+
+wget https://github.com/mackerelio/mackerel-agent/releases/download/v0.18.1-k/mackerel-agent_linux_arm.tar.gz
+tar xzf mackerel-agent_linux_arm.tar.gz
+sudo mv mackerel-agent_linux_arm /opt/mackerel-agent
+
+sudo sh << SCRIPT
+cat >>/opt/mackerel-agent/mackerel-agent.conf <<'EOF';
+apikey = "取得したapikey"
+EOF
+SCRIPT
+
+agent起動用スクリプト
+sudo touch /etc/init.d/mackerel-agent
+chmod =X /etc/init.d/mackerel-agent
+update-rc.d mackerel-agent defaults
+

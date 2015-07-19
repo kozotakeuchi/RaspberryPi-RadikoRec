@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -n "Starting mackerel-agent: "
+/opt/mackerel-agent/mackerel-agent --conf=/opt/mackerel-agent/mackerel-agent.conf
+exit 0
