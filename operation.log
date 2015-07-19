@@ -1,0 +1,24 @@
+Raspbian
+
+・初回起動
+
+Usename: pi
+パスワード: raspberry
+
+sudo raspi-config
+作業：パーティションの拡張(Expand Filesystem)
+作業：日本語ロケール追加(Internationalisation Options → Change Locale)
+作業：タイムゾーンを変更(Internationalisation Options → Change Timezone)
+
+・パッケージの更新
+sudo apt-get update
+※ APTライブラリのインデックスを更新します。更新先は/etc/apt/sources.listに記述されています
+sudo apt-get upgrade
+※ システムにインストールされているパッケージを最新バージョンにします
+
+・ホスト名変更
+sudo nano /etc/hostname
+sudo nano /etc/hosts
+sudo /etc/init.d/networking restart
+
+
