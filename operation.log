@@ -21,4 +21,8 @@ sudo nano /etc/hostname
 sudo nano /etc/hosts
 sudo /etc/init.d/networking restart
 
+・radiko録音のために必要なパッケージをインストール
+sudo apt-get install rtmpdump swftools libxml2-utils ffmpeg
 
+・radikoを録音するためのスクリプト
+rec_radiko.sh
