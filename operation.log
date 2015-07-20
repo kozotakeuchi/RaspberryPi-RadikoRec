@@ -42,6 +42,8 @@ SCRIPT
 
 agent起動用スクリプト
 sudo touch /etc/init.d/mackerel-agent
-chmod =X /etc/init.d/mackerel-agent
+chmod +x /etc/init.d/mackerel-agent
 update-rc.d mackerel-agent defaults
 
+・tty2からtty6を無効にする
+sudo nano /etc/inittab
