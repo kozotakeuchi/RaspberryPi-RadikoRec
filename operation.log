@@ -47,3 +47,7 @@ update-rc.d mackerel-agent defaults
 
 ・tty2からtty6を無効にする
 sudo nano /etc/inittab
+
+・cronの実行結果をメールしない
+crontab -e
+MAILTO=""
